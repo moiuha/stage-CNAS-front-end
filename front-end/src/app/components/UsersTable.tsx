@@ -15,7 +15,7 @@ type User = {
 export default function UsersTable({ users }: { users: User[] }) {
   const router = useRouter();
 
-  const onRowClick = (id) => {
+  const onRowClick = (id : any) => {
 
     router.push(`/admin/adminUserInfo/${id}`);
   };

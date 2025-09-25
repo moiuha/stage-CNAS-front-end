@@ -11,11 +11,11 @@ export default function DeleteRoomButton({ roomId }: { roomId: number }) {
     if (window.confirm("Êtes-vous sûr de vouloir supprimer cette chambre ?")) {
       startTransition(async () => {
         const res = await deleteRoomAction(roomId);
-        if (res.success) {
+        if (typeof res === "object" && res !== null && "success" in res && res.success) {
           alert("Chambre supprimée avec succès !");
           router.replace("/admin/adminRoomsManagement");
         } else {
-          alert(res.error || "Erreur lors de la suppression.");
+          alert("Erreur lors de la suppression.");
         }
       });
     }

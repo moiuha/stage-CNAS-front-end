@@ -29,7 +29,7 @@ function getStatusColor(status?: string) {
 }
 
 
-export default async function RoomPage({ params }) {
+export default async function RoomPage({ params  } : any) {
   const { id } = params;
   const res1 = await getRoomById(Number(id));
   const room = res1.room || res1.roomData || res1.roomInfo || res1;

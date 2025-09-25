@@ -8,7 +8,7 @@ export async function updateRoomAction(roomId: number, data: any) {
     const result = await updateRoom(roomId, data);
     return { success: true, result };
   } catch (error) {
-    return { success: false, error: error?.message || 'Erreur lors de la mise à jour.' };
+    return  'Erreur lors de la mise à jour.' ;
   }
 }
 
@@ -18,6 +18,6 @@ export async function deleteRoomAction(roomId: number) {
     const result = await deleteRoom(roomId);
     return { success: true, result };
   } catch (error) {
-    return { success: false, error: error?.message || 'Erreur lors de la suppression.' };
+    return  'Erreur lors de la suppression.' ;
   }
 }

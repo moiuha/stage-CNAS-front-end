@@ -3,6 +3,6 @@ import { addRoom } from "../../services/room";
 
 
 
-export async function createRoomAction(payload) {
+export async function createRoomAction(payload : any) {
   return await addRoom(payload);
 }

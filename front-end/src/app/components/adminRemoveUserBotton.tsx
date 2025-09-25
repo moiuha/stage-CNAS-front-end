@@ -3,6 +3,7 @@ import React, { useTransition } from "react";
 import { CancelBookingRequest } from "../services/room";
 import { cancelBookingAction } from "../User/userRoom/actions";
 import { useRouter } from "next/navigation";
+import { any } from "zod";
 
 interface AdminRemoveUserButtonProps {
   data?: CancelBookingRequest | null;
@@ -14,7 +15,7 @@ export default function AdminRemoveUserButton({ data }: AdminRemoveUserButtonPro
     const router = useRouter();
     const handleRemove = () => {
       startTransition(async () => {
-        const res = await cancelBookingAction(data);
+        const res = await cancelBookingAction(data as any);
         if (res?.error) {
           alert(res.error || "Erreur lors de l'annulation.");
         } else {

@@ -16,7 +16,7 @@ type RoomCardProps = {
   };
 };
 
-const getStatusColor = (status) => {
+const getStatusColor = (status : any) => {
   switch ((status || "").toLowerCase()) {
     case "disponible":
       return "bg-green-100 text-green-800 border-green-200";

@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { logout } from "../login/actions";
 
 import { act, useActionState, useState } from "react";
@@ -107,7 +108,7 @@ export default function Header() {
 
 import Link from "next/link";
 
-function NavItem({ icon: Icon, label, href }: { icon: (props: any) => JSX.Element; label: string; href?: string }) {
+function NavItem({ icon: Icon, label, href }: { icon: (props: any) => React.ReactElement; label: string; href?: string }) {
   if (href) {
     return (
       <Link href={href} className="flex items-center gap-2 cursor-pointer hover:underline">
@@ -129,7 +130,7 @@ function MobileNavItem({
   label,
   onClick,
 }: {
-  icon: (props: any) => JSX.Element;
+  icon: (props: any) => React.ReactElement;
   label: string;
   onClick: () => void;
 }) {

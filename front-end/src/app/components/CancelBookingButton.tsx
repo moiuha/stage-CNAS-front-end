@@ -14,7 +14,7 @@ export default function CancelBookingButton({ data }: CancelBookingButtonProps) 
 
   const handleCancel = () => {
     startTransition(async () => {
-      const res = await cancelBookingAction(data);
+      const res = await cancelBookingAction(data as CancelBookingRequest);
       if (res?.error) {
         alert(res.error || "Erreur lors de l'annulation.");
       } else {

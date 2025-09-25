@@ -17,7 +17,7 @@ export default async function RoomManagementPage() {
  
     
     
-    const mappedRooms = rooms.map((r) => ({
+    const mappedRooms = rooms.map((r : any) => ({
       roomId: r.roomId,
       roomType: r.roomType,
       roomDescription: r.roomDescription,
@@ -50,7 +50,7 @@ export default async function RoomManagementPage() {
 
       <section>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {mappedRooms.map((r) => (
+          {mappedRooms.map((r : any) => (
             <RoomCard
               key={r.roomId}
               room={r}

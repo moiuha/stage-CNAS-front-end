@@ -27,7 +27,7 @@ export async function getAllUsers() {
 }
 
 // Get user by id
-export async function getUserById(userId) {
+export async function getUserById(userId : any) {
   const cookieStore = await cookies();
   const token = cookieStore.get("token")?.value;
   const headers: Record<string, string> = {};
@@ -40,7 +40,7 @@ export async function getUserById(userId) {
   return await res.json();
 }
 // Delete user (ADMIN)
-export async function deleteUser(userId) {
+export async function deleteUser(userId : any) {
   const cookieStore = await cookies();
   const token = cookieStore.get("token")?.value;
   const headers: Record<string, string> = {};

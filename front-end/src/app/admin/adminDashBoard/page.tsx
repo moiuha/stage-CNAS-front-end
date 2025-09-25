@@ -39,11 +39,11 @@ export default async function AdminDashboardPage() {
   const rooms = res1.roomList ; 
  
   const totalUsers = users.length;
-  const totalAdmins = users.filter((u) => u.role === "ADMIN").length;
+  const totalAdmins = users.filter((u : any) => u.role === "ADMIN").length;
   const totalRooms = rooms.length;
-  const availableRooms = rooms.filter((r) => r.roomStatus === "AVAILABLE").length;
-  const occupiedRooms = rooms.filter((r) => r.roomStatus !== "AVAILABLE").length;
-  const types = Array.from(new Set(rooms.map((r) => r.roomType)));
+  const availableRooms = rooms.filter((r : any) => r.roomStatus === "AVAILABLE").length;
+  const occupiedRooms = rooms.filter((r : any) => r.roomStatus !== "AVAILABLE").length;
+  const types = Array.from(new Set(rooms.map((r : any) => r.roomType)));
 
   
   return (
@@ -105,7 +105,7 @@ export default async function AdminDashboardPage() {
             </a>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {rooms.slice(0, 6).map((r) => (
+            {rooms.slice(0, 6).map((r : any) => (
               <RoomCard key={r.roomId} room={r} />
             ))}
           </div>

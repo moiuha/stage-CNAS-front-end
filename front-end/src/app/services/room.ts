@@ -63,7 +63,7 @@ export async function getRoomTypes() {
   return await res.json();
 }
 // Get Room By Id (public)
-export async function getRoomById(roomId) {
+export async function getRoomById(roomId : any) {
   const res = await fetch(`https://protective-acceptance-production.up.railway.app/rooms/room-by-id/${roomId}`, {
     cache: "no-store",
   });

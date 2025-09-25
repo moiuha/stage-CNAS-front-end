@@ -87,12 +87,12 @@ export default function UpdateRoomButton({ roomId, data }: UpdateRoomButtonProps
 
           const res = await updateRoomAction(roomId, finalPayload);
 
-          if (res && res.success) {
+          if (res && typeof res === 'object' && 'success' in res && (res as any).success) {
             alert('Chambre mise à jour avec succès !');
            
             window.location.reload();
           } else {
-            alert(res?.error || 'Erreur lors de la mise à jour.');
+            alert(typeof res === 'string' ? res : (res as any)?.error || 'Erreur lors de la mise à jour.');
           }
         } catch (err) {
           console.error('Update failed', err);
