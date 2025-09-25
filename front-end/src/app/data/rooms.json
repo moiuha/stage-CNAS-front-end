@@ -1,0 +1,76 @@
+[
+  {  
+    "room_id": 1,
+    "roomType": "Deluxe",
+    "roomDescription": "Spacious room with sea view yaw aw",
+    "roomStatus": "available",
+    "roomImage": "deluxe1.jpg",
+    "roomNumOfBed": 2,
+    "roomFloor": 3,
+    "checkInDate": "2025-09-05",
+    "checkOutDate": "2025-09-10",
+    "users": [
+      {
+        "user_id": 101,
+        "firstName": "John",
+        "lastName": "Doe",
+        "phoneNum": 123456789,
+        "email": "john.doe@example.com",
+        "role": "GUEST"
+      },
+      {
+        "user_id": 102,
+        "firstName": "Jane",
+        "lastName": "Smith",
+        "phoneNum": 987654321,
+        "email": "jane.smith@example.com",
+        "role": "GUEST"
+      }
+    ]
+  },
+  {  
+    "room_id": 2,
+    "roomType": "Standard",
+    "roomDescription": "Cozy room with modern amenities",
+    "roomStatus": "occupied",
+    "roomImage": "standard1.jpg",
+    "roomNumOfBed": 1,
+    "roomFloor": 2,
+    "checkInDate": "2025-09-01",
+    "checkOutDate": "2025-09-07",
+    "users": [
+      {
+        "user_id": 103,
+        "firstName": "Alice",
+        "lastName": "Brown",
+        "phoneNum": 112233445,
+        "email": "alice.brown@example.com",
+        "role": "GUEST"
+      }
+    ]
+  },
+  {  
+    "room_id": 3,
+    "roomType": "Suite",
+    "roomDescription": "Luxurious suite with private balcony",
+    "roomStatus": "available",
+    "roomImage": "suite1.jpg",
+    "roomNumOfBed": 3,
+    "roomFloor": 5,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "users": []
+  },
+  {  
+    "room_id": 4,
+    "roomType": "Economy",
+    "roomDescription": "Budget-friendly room with basic features",
+    "roomStatus": "maintenance",
+    "roomImage": "economy1.jpg",
+    "roomNumOfBed": 1,
+    "roomFloor": 1,
+    "checkInDate": null,
+    "checkOutDate": null,
+    "users": []
+  }
+]
