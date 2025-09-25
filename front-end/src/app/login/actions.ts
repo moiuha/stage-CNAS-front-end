@@ -23,7 +23,7 @@ export async function login(prevState: any, formData: FormData) {
   const { email, password } = result.data;
 
 
-  const res = await fetch('http://localhost:4040/auth/login', {
+  const res = await fetch('https://protective-acceptance-production.up.railway.app/auth/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, password }),

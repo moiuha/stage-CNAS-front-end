@@ -137,7 +137,7 @@ export default function RoomForm() {
           onChange={(v) => {
             
             if (/^\d*$/.test(v)) {
-              onChange("roomNumber", v);
+              onChange("roomNumOfBed", v);
             }
           }}
           placeholder="ex: 2"

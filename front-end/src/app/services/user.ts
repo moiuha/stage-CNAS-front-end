@@ -18,7 +18,7 @@ export async function getAllUsers() {
   const token = cookieStore.get("token")?.value;
   const headers: Record<string, string> = {};
   if (token) headers["Authorization"] = `Bearer ${token}`;
-  const res = await fetch("http://localhost:4040/users/all", {
+  const res = await fetch("https://protective-acceptance-production.up.railway.app/users/all", {
     headers,
     cache: "no-store",
   });
@@ -32,7 +32,7 @@ export async function getUserById(userId) {
   const token = cookieStore.get("token")?.value;
   const headers: Record<string, string> = {};
   if (token) headers["Authorization"] = `Bearer ${token}`;
-  const res = await fetch(`http://localhost:4040/users/get-by-id/${userId}`, {
+  const res = await fetch(`https://protective-acceptance-production.up.railway.app/users/get-by-id/${userId}`, {
     headers,
     cache: "no-store",
   });
@@ -45,7 +45,7 @@ export async function deleteUser(userId) {
   const token = cookieStore.get("token")?.value;
   const headers: Record<string, string> = {};
   if (token) headers["Authorization"] = `Bearer ${token}`;
-  const res = await fetch(`http://localhost:4040/users/delete/${userId}`, {
+  const res = await fetch(`https://protective-acceptance-production.up.railway.app/users/delete/${userId}`, {
     method: "DELETE",
     headers,
     cache: "no-store",
@@ -60,7 +60,7 @@ export async function getLoggedInUserProfile() {
   const token = cookieStore.get("token")?.value;
   const headers: Record<string, string> = {};
   if (token) headers["Authorization"] = `Bearer ${token}`;
-  const res = await fetch("http://localhost:4040/users/get-logged-in-profile-info", {
+  const res = await fetch("https://protective-acceptance-production.up.railway.app/users/get-logged-in-profile-info", {
     headers,
     cache: "no-store",
   });
